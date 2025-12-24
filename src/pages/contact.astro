@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="お問い合わせ - 杏の里教会">
+  <h1 class="text-4xl font-bold mb-8 text-apricot-600">お問い合わせ</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- お問い合わせ情報 -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6 text-apricot-600">ご連絡方法</h2>
+      
+      <div class="bg-white border-l-4 border-apricot-600 p-6 rounded-lg mb-6">
+        <h3 class="font-bold text-apricot-600 mb-3">メール</h3>
+        <p class="mb-2">
+          <a href="mailto:info@anzunosato.net" class="text-apricot-600 hover:underline">
+            info@anzunosato.net
+          </a>
+        </p>
+        <p class="text-sm text-gray-600">勧士 高橋堅治宛</p>
+      </div>
+
+      <div class="bg-white border-l-4 border-apricot-600 p-6 rounded-lg mb-6">
+        <h3 class="font-bold text-apricot-600 mb-3">電話</h3>
+        <p class="text-lg">026-273-0210</p>
+      </div>
+
+      <div class="bg-white border-l-4 border-apricot-600 p-6 rounded-lg">
+        <h3 class="font-bold text-apricot-600 mb-3">住所</h3>
+        <p>〒387-0004</p>
+        <p>長野県千曲市倉科101-2</p>
+      </div>
+    </div>
+
+    <!-- 教会情報 -->
+    <div>
+      <h2 class="text-2xl font-bold mb-6 text-apricot-600">教会情報</h2>
+      
+      <div class="bg-apricot-50 p-6 rounded-lg mb-6">
+        <h3 class="font-bold text-apricot-600 mb-3">礼拝時間</h3>
+        <p class="mb-2"><strong>日曜日:</strong> 10:00～</p>
+        <p class="text-sm text-gray-600">毎週日曜日に礼拝を行っています。</p>
+      </div>
+
+      <div class="bg-apricot-50 p-6 rounded-lg mb-6">
+        <h3 class="font-bold text-apricot-600 mb-3">駐車場</h3>
+        <p class="text-sm text-gray-600">教会堂の前後に十数台を駐車できます。</p>
+      </div>
+
+      <div class="bg-apricot-50 p-6 rounded-lg">
+        <h3 class="font-bold text-apricot-600 mb-3">送迎</h3>
+        <p class="text-sm text-gray-600">事前にご連絡いただければ、最寄りの駅までの送迎も可能です。</p>
+        <p class="text-xs text-gray-500 mt-2">屋代駅 / 屋代高校前駅より約8分</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- メッセージセクション -->
+  <div class="mt-12 bg-apricot-50 p-8 rounded-lg">
+    <h2 class="text-2xl font-bold mb-4 text-apricot-600">ご質問やご不明な点</h2>
+    <p class="text-lg mb-4">
+      杏の里教会についてのご質問やご不明な点がございましたら、お気軽にお問い合わせください。
+    </p>
+    <p class="text-lg mb-4">
+      礼拝へのご参加、聖書学習、その他のご相談など、どのようなことでもお気軽にお聞きください。
+    </p>
+    <p class="text-lg">
+      皆様のご来訪を心よりお待ちしています。
+    </p>
+  </div>
+</Layout>

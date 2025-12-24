@@ -1,0 +1,74 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = '杏の里教会 - キリスト兄弟団杏の里教会' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="bg-apricot-500 text-white shadow-md">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="text-2xl font-bold">キリスト兄弟団杏の里教会</a>
+          <ul class="flex gap-6">
+            <li><a href="/" class="hover:text-apricot-100 transition">ホーム</a></li>
+            <li><a href="/about" class="hover:text-apricot-100 transition">教会について</a></li>
+            <li><a href="/sermons" class="hover:text-apricot-100 transition">説教</a></li>
+            <li><a href="/news" class="hover:text-apricot-100 transition">ニュース</a></li>
+            <li><a href="/contact" class="hover:text-apricot-100 transition">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+      <slot />
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 class="font-bold mb-4">教会情報</h3>
+            <p class="text-sm">〒387-0004</p>
+            <p class="text-sm">長野県千曲市倉科101-2</p>
+            <p class="text-sm mt-2">電話: 026-273-0210</p>
+            <p class="text-sm">メール: info@anzunosato.net</p>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">リンク</h3>
+            <ul class="text-sm space-y-2">
+              <li><a href="/about" class="hover:text-apricot-400">教会について</a></li>
+              <li><a href="/sermons" class="hover:text-apricot-400">説教</a></li>
+              <li><a href="/news" class="hover:text-apricot-400">ニュース</a></li>
+              <li><a href="/privacy" class="hover:text-apricot-400">個人情報の保護</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">礼拝時間</h3>
+            <p class="text-sm">日曜日 10:00～</p>
+            <p class="text-sm mt-4">駐車場完備</p>
+            <p class="text-sm">事前連絡で送迎可能</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 pt-8 text-center text-sm">
+          <p>&copy; 2025 キリスト兄弟団杏の里教会. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
